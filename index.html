@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITK24 - Beta Academy - Công Nghệ Công Nghiệp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f7ff',
+                            100: '#e0effe',
+                            200: '#bae0fd',
+                            500: '#0084ff',
+                            600: '#0066cc',
+                            700: '#004c99',
+                            800: '#003366',
+                            900: '#001f3f'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(0, 102, 204, 0.85) 0%, rgba(0, 31, 63, 0.90) 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md border-b border-gray-100 dark:border-gray-800 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                
+                <!-- Logo -->
+                <div class="flex items-center gap-3">
+                    <div class="w-11 h-11 bg-primary-600 rounded-xl flex items-center justify-center text-white shadow-md shadow-primary-500/20">
+                        <i class="fa-solid fa-graduation-cap text-xl"></i>
+                    </div>
+                    <div>
+                        <span class="text-2xl font-black text-primary-700 dark:text-primary-400 tracking-tight leading-none block">ITK24</span>
+                        <span class="text-[10px] font-bold tracking-widest text-gray-500 dark:text-gray-400 uppercase">Công Nghệ Công Nghiệp</span>
+                    </div>
+                </div>
+
+                <!-- Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#trang-chu" class="text-primary-600 dark:text-primary-400 font-semibold border-b-2 border-primary-600 pb-1">Trang chủ</a>
+                    <a href="#thanh-vien" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Thành viên</a>
+                    <a href="#bai-nop" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Bài nộp</a>
+                    <a href="#tai-lieu" class="text-gray-600 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition">Tài liệu</a>
+                </nav>
+
+                <!-- Action Controls -->
+                <div class="flex items-center space-x-4">
+                    <!-- Hotline Support Button -->
+                    <div class="hidden lg:flex items-center bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-full text-sm font-semibold border border-gray-200 dark:border-gray-700">
+                        <i class="fa-solid fa-headset text-primary-600 mr-2"></i>
+                        <span>Hỗ trợ: <strong class="text-primary-700 dark:text-primary-400">0336051699</strong></span>
+                    </div>
+
+                    <!-- Dark Mode Toggle -->
+                    <button id="theme-toggle" class="p-2.5 rounded-full text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 transition">
+                        <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg"></i>
+                        <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg"></i>
+                    </button>
+
+                    <!-- User Icon -->
+                    <div class="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-gray-600 dark:text-gray-300 border border-gray-200 dark:border-gray-700">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="trang-chu" class="relative bg-gray-900 text-white min-h-[520px] flex flex-col justify-between overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1920&q=80" class="w-full h-full object-cover object-center" alt="Beta Academy">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <!-- Hero Content -->
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-28 text-left w-full">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-3.5 py-1.5 rounded-full text-xs font-semibold uppercase tracking-wider mb-6 border border-white/20">
+                <i class="fa-solid fa-gear text-primary-300"></i>
+                <span>CÔNG NGHỆ CÔNG NGHIỆP</span>
+            </div>
+            <h1 class="text-5xl sm:text-7xl font-black tracking-tight mb-4 text-white">Beta Academy</h1>
+            <p class="text-lg sm:text-2xl font-light text-blue-100 mb-8 max-w-2xl">
+                Khám phá công nghệ • Hiểu nguyên lý • Tạo tương lai
+            </p>
+
+            <div class="flex flex-wrap gap-4">
+                <a href="#tai-lieu" class="bg-primary-500 hover:bg-primary-600 text-white font-bold px-7 py-3.5 rounded-xl shadow-lg shadow-primary-500/30 transition flex items-center gap-2">
+                    <span>KHÁM PHÁ NGAY</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#bai-nop" class="bg-white/10 hover:bg-white/20 backdrop-blur-md border border-white/30 text-white font-semibold px-7 py-3.5 rounded-xl transition flex items-center gap-2">
+                    <i class="fa-solid fa-upload"></i>
+                    <span>Nộp bài tập</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Real-time Stats Overlay Banner -->
+        <div class="relative z-20 max-w-5xl mx-auto px-4 w-full -mb-12">
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-6 border border-gray-100 dark:border-gray-700 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+                <div>
+                    <div class="text-3xl font-extrabold text-primary-600 dark:text-primary-400 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-users text-lg opacity-70"></i>
+                        <span id="stat-members">1,250</span>+
+                    </div>
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1">Học viên Beta Academy</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-primary-600 dark:text-primary-400 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-file-lines text-lg opacity-70"></i>
+                        <span id="stat-docs">480</span>+
+                    </div>
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1">Tài liệu Công nghệ</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-green-600 dark:text-green-400 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-check-circle text-lg opacity-70"></i>
+                        <span id="stat-rate">98</span>%
+                    </div>
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1">Bài nộp Đạt chuẩn</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-extrabold text-primary-600 dark:text-primary-400 flex items-center justify-center gap-1">
+                        <i class="fa-solid fa-diagram-project text-lg opacity-70"></i>
+                        <span id="stat-projects">32</span>+
+                    </div>
+                    <div class="text-xs font-medium text-gray-500 dark:text-gray-400 mt-1">Đồ án Tự động hóa</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: THÀNH VIÊN -->
+    <section id="thanh-vien" class="pt-28 pb-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+            <div>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Danh Sách Thành Viên</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Tải ảnh đại diện lớn nét từ thiết bị hoặc chèn URL để cập nhật thông tin thành viên.</p>
+            </div>
+            <button onclick="openMemberModal()" class="mt-4 md:mt-0 bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 rounded-xl flex items-center gap-2 transition shadow-md shadow-primary-500/20">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Thêm Thành Viên</span>
+            </button>
+        </div>
+
+        <!-- Members Grid -->
+        <div id="members-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <!-- SECTION: BÀI NỘP -->
+    <section id="bai-nop" class="py-16 bg-gray-100/60 dark:bg-gray-800/50 border-y border-gray-200/60 dark:border-gray-700">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                <div>
+                    <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Quản Lý Bài Nộp & Chấm Điểm</h2>
+                    <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Thêm bài nộp, đánh dấu hoàn thành, chấm điểm và quản lý liên kết bài tập đính kèm.</p>
+                </div>
+                <button onclick="openSubmissionModal()" class="mt-4 md:mt-0 bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 rounded-xl flex items-center gap-2 transition shadow-md shadow-primary-500/20">
+                    <i class="fa-solid fa-plus"></i>
+                    <span>Tạo Bài Nộp Mới</span>
+                </button>
+            </div>
+
+            <!-- Dashboard Stats Card -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center gap-4">
+                    <div class="p-3 bg-blue-100 dark:bg-blue-900/40 text-blue-600 rounded-lg"><i class="fa-solid fa-folder-open text-xl"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Tổng Bài Nộp</div>
+                        <div id="dash-total" class="text-2xl font-bold">0</div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center gap-4">
+                    <div class="p-3 bg-green-100 dark:bg-green-900/40 text-green-600 rounded-lg"><i class="fa-solid fa-circle-check text-xl"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Đã Hoàn Thành</div>
+                        <div id="dash-completed" class="text-2xl font-bold text-green-600">0</div>
+                    </div>
+                </div>
+                <div class="bg-white dark:bg-gray-800 p-4 rounded-xl border border-gray-200 dark:border-gray-700 flex items-center gap-4">
+                    <div class="p-3 bg-amber-100 dark:bg-amber-900/40 text-amber-600 rounded-lg"><i class="fa-solid fa-star text-xl"></i></div>
+                    <div>
+                        <div class="text-xs text-gray-500 dark:text-gray-400">Điểm Trung Bình</div>
+                        <div id="dash-avg" class="text-2xl font-bold text-amber-600">0.0</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Submissions Table -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-sm border border-gray-200 dark:border-gray-700 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-gray-50 dark:bg-gray-700/50 border-b border-gray-200 dark:border-gray-700 text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">
+                                <th class="py-4 px-6">Tên Bài Tập</th>
+                                <th class="py-4 px-6">Học Viên</th>
+                                <th class="py-4 px-6">Trạng Thái</th>
+                                <th class="py-4 px-6">Điểm Số</th>
+                                <th class="py-4 px-6">Bài Nộp</th>
+                                <th class="py-4 px-6 text-right">Thao Tác</th>
+                            </tr>
+                        </thead>
+                        <tbody id="submission-table-body" class="divide-y divide-gray-100 dark:divide-gray-700/60 text-sm">
+                            <!-- Rendered by JS -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: TÀI LIỆU -->
+    <section id="tai-lieu" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+            <div>
+                <h2 class="text-3xl font-extrabold text-gray-900 dark:text-white">Tài Liệu Hướng Dẫn & Học Tập</h2>
+                <p class="text-gray-500 dark:text-gray-400 text-sm mt-1">Thêm, chia sẻ hoặc xóa liên kết tài liệu kỹ thuật của nhóm.</p>
+            </div>
+            <button onclick="openDocModal()" class="mt-4 md:mt-0 bg-primary-600 hover:bg-primary-700 text-white font-medium px-5 py-2.5 rounded-xl flex items-center gap-2 transition shadow-md shadow-primary-500/20">
+                <i class="fa-solid fa-file-circle-plus"></i>
+                <span>Chèn Tài Liệu Mới</span>
+            </button>
+        </div>
+
+        <div id="docs-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Rendered by JS -->
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 border-t border-gray-800 py-10">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <i class="fa-solid fa-graduation-cap text-primary-500 text-xl"></i>
+                <span class="text-xl font-black text-white">Beta Academy</span>
+            </div>
+            <p class="text-sm">Nền tảng Học tập & Quản lý Công nghệ Công nghiệp Beta Academy</p>
+            <p class="text-xs text-gray-600 mt-2">© 2026 Beta Academy Platform. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- MODAL: Thành Viên -->
+    <div id="member-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full p-6 shadow-2xl border border-gray-100 dark:border-gray-700 max-h-[90vh] overflow-y-auto">
+            <h3 id="member-modal-title" class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Thêm / Chỉnh Sửa Thành Viên</h3>
+            <form id="member-form" onsubmit="saveMember(event)">
+                <input type="hidden" id="member-id">
+                <input type="hidden" id="member-avatar-base64">
+                
+                <div class="space-y-4">
+                    <!-- Ảnh đại diện upload & preview -->
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-2">Ảnh Đại Diện</label>
+                        <div class="flex items-center gap-4 mb-3">
+                            <div id="avatar-preview-container" class="w-20 h-20 rounded-full bg-gray-100 dark:bg-gray-700 border-2 border-primary-500 flex items-center justify-center overflow-hidden shrink-0 shadow-md">
+                                <i id="avatar-placeholder-icon" class="fa-regular fa-user text-3xl text-gray-400"></i>
+                                <img id="avatar-img-preview" src="" class="w-full h-full object-cover hidden">
+                            </div>
+                            <div class="flex-1 space-y-2">
+                                <label class="cursor-pointer inline-flex items-center gap-2 bg-primary-50 dark:bg-primary-900/40 text-primary-600 dark:text-primary-300 px-3 py-1.5 rounded-lg text-xs font-semibold hover:bg-primary-100 transition">
+                                    <i class="fa-solid fa-upload"></i>
+                                    <span>Tải ảnh từ máy</span>
+                                    <input type="file" id="member-file-input" accept="image/*" class="hidden" onchange="handleImageUpload(event)">
+                                </label>
+                                <button type="button" onclick="clearAvatar()" class="text-xs text-red-500 hover:underline block">Xóa ảnh</button>
+                            </div>
+                        </div>
+                        <input type="url" id="member-avatar-url" placeholder="Hoặc dán Link URL ảnh tại đây..." class="w-full px-4 py-2 text-xs rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500" oninput="handleUrlInput(this.value)">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Họ & Tên</label>
+                        <input type="text" id="member-name" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Chức vụ / Vai trò</label>
+                        <input type="text" id="member-role" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Số Điện Thoại</label>
+                        <input type="text" id="member-phone" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-end space-x-3">
+                    <button type="button" onclick="closeMemberModal()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">Hủy</button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-primary-600 text-white font-medium hover:bg-primary-700">Lưu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Bài Nộp -->
+    <div id="sub-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full p-6 shadow-2xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Tạo Bài Nộp Mới</h3>
+            <form id="sub-form" onsubmit="saveSubmission(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Tên Bài Tập</label>
+                        <input type="text" id="sub-title" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Học Viên Thực Hiện</label>
+                        <input type="text" id="sub-student" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Link Bài Nộp (Drive/GitHub)</label>
+                        <input type="url" id="sub-url" placeholder="https://..." required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-end space-x-3">
+                    <button type="button" onclick="closeSubmissionModal()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">Hủy</button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-primary-600 text-white font-medium hover:bg-primary-700">Thêm Bài Nộp</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL: Tài Liệu -->
+    <div id="doc-modal" class="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm hidden flex items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-2xl max-w-md w-full p-6 shadow-2xl border border-gray-100 dark:border-gray-700">
+            <h3 class="text-xl font-bold mb-4 text-gray-900 dark:text-white">Chèn Tài Liệu Mới</h3>
+            <form id="doc-form" onsubmit="saveDoc(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Tên Tài Liệu</label>
+                        <input type="text" id="doc-title" required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Loại Tài Liệu / Chuyên Mục</label>
+                        <input type="text" id="doc-category" placeholder="Ví dụ: Lập trình PLC, SCADA..." required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold uppercase text-gray-500 mb-1">Link Tài Liệu (Drive/PDF/Docs)</label>
+                        <input type="url" id="doc-url" placeholder="https://..." required class="w-full px-4 py-2 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary-500">
+                    </div>
+                </div>
+                <div class="mt-6 flex justify-end space-x-3">
+                    <button type="button" onclick="closeDocModal()" class="px-4 py-2 rounded-xl bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 font-medium">Hủy</button>
+                    <button type="submit" class="px-4 py-2 rounded-xl bg-primary-600 text-white font-medium hover:bg-primary-700">Lưu Tài Liệu</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // --- 1. DARK / LIGHT MODE LOGIC ---
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+
+        // --- 2. DATA STORES (with LocalStorage) ---
+        let members = JSON.parse(localStorage.getItem('beta_members')) || [
+            { id: 1, name: "Nguyễn Viết Bảo Duy", avatar: "", role: "Trưởng Nhóm Kỹ Thuật", phone: "0336051699" },
+            { id: 2, name: "Trần Minh Hoàng", avatar: "", role: "Kỹ sư Tự Động Hóa", phone: "0912345678" }
+        ];
+
+        let submissions = JSON.parse(localStorage.getItem('beta_submissions')) || [
+            { id: 1, title: "Bài tập 01: Thiết kế mạch PLC Siemens S7-1200", student: "Nguyễn Viết Bảo Duy", status: true, score: 9.5, link: "#" },
+            { id: 2, title: "Bài tập 02: Thiết kế giao diện SCADA WinCC", student: "Trần Minh Hoàng", status: false, score: 0, link: "#" }
+        ];
+
+        let docs = JSON.parse(localStorage.getItem('beta_docs')) || [
+            { id: 1, title: "Giáo trình Lập trình PLC Siemens S7-1200 Cơ bản", category: "Tự động hóa", url: "#" },
+            { id: 2, title: "Tài liệu Thiết kế Hệ thống Mạng Công nghiệp Modbus RTU", category: "Mạng công nghiệp", url: "#" }
+        ];
+
+        function saveData() {
+            localStorage.setItem('beta_members', JSON.stringify(members));
+            localStorage.setItem('beta_submissions', JSON.stringify(submissions));
+            localStorage.setItem('beta_docs', JSON.stringify(docs));
+            updateRealtimeStats();
+        }
+
+        // --- 3. REALTIME STATS TICKER ---
+        function updateRealtimeStats() {
+            document.getElementById('stat-members').innerText = (1250 + members.length - 2).toLocaleString();
+            document.getElementById('stat-docs').innerText = (480 + docs.length - 2).toLocaleString();
+            
+            const completedCount = submissions.filter(s => s.status).length;
+            const rate = submissions.length ? Math.round((completedCount / submissions.length) * 100) : 98;
+            document.getElementById('stat-rate').innerText = rate;
+        }
+
+        setInterval(() => {
+            const statMembersEl = document.getElementById('stat-members');
+            let currentVal = parseInt(statMembersEl.innerText.replace(/,/g, ''));
+            if(Math.random() > 0.6) {
+                statMembersEl.innerText = (currentVal + 1).toLocaleString();
+            }
+        }, 4000);
+
+        // --- 4. IMAGE UPLOAD & PREVIEW HANDLER ---
+        function handleImageUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const base64Str = e.target.result;
+                    setAvatarPreview(base64Str);
+                    document.getElementById('member-avatar-base64').value = base64Str;
+                    document.getElementById('member-avatar-url').value = '';
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function handleUrlInput(url) {
+            if (url.trim() !== '') {
+                setAvatarPreview(url);
+                document.getElementById('member-avatar-base64').value = url;
+            } else {
+                clearAvatar();
+            }
+        }
+
+        function setAvatarPreview(src) {
+            const img = document.getElementById('avatar-img-preview');
+            const icon = document.getElementById('avatar-placeholder-icon');
+            img.src = src;
+            img.classList.remove('hidden');
+            icon.classList.add('hidden');
+        }
+
+        function clearAvatar() {
+            const img = document.getElementById('avatar-img-preview');
+            const icon = document.getElementById('avatar-placeholder-icon');
+            img.src = '';
+            img.classList.add('hidden');
+            icon.classList.remove('hidden');
+            document.getElementById('member-avatar-base64').value = '';
+            document.getElementById('member-avatar-url').value = '';
+            document.getElementById('member-file-input').value = '';
+        }
+
+        // --- 5. MEMBER MANAGEMENT ---
+        function renderMembers() {
+            const container = document.getElementById('members-list');
+            container.innerHTML = members.map(m => {
+                const avatarHtml = m.avatar && m.avatar.trim() !== '' 
+                    ? `<img src="${m.avatar}" alt="${m.name}" class="w-32 h-32 rounded-full object-cover border-4 border-primary-500 shadow-md">`
+                    : `<div class="w-32 h-32 rounded-full bg-primary-100 dark:bg-primary-900/50 text-primary-600 dark:text-primary-300 font-extrabold flex items-center justify-center text-4xl border-4 border-primary-500 shadow-md">${m.name.charAt(0)}</div>`;
+
+                return `
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col justify-between items-center text-center">
+                    <div class="flex flex-col items-center w-full">
+                        <div class="mb-4">
+                            ${avatarHtml}
+                        </div>
+                        <h3 class="font-extrabold text-gray-900 dark:text-white text-xl mb-1">${m.name}</h3>
+                        <span class="text-xs bg-primary-50 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-semibold px-3 py-1 rounded-full mb-4">${m.role}</span>
+                        <div class="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-6">
+                            <i class="fa-solid fa-phone text-xs"></i> <span>${m.phone}</span>
+                        </div>
+                    </div>
+                    <div class="w-full pt-4 border-t border-gray-100 dark:border-gray-700 flex justify-center space-x-3">
+                        <button onclick="editMember(${m.id})" class="px-4 py-2 text-xs font-semibold bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-xl hover:bg-gray-200 transition">
+                            <i class="fa-solid fa-pen-to-square mr-1"></i> Sửa
+                        </button>
+                        <button onclick="deleteMember(${m.id})" class="px-4 py-2 text-xs font-semibold bg-red-50 dark:bg-red-900/30 text-red-600 dark:text-red-400 rounded-xl hover:bg-red-100 transition">
+                            <i class="fa-solid fa-trash mr-1"></i> Xóa
+                        </button>
+                    </div>
+                </div>
+            `}).join('');
+        }
+
+        function openMemberModal(member = null) {
+            document.getElementById('member-modal').classList.remove('hidden');
+            if(member) {
+                document.getElementById('member-id').value = member.id;
+                document.getElementById('member-name').value = member.name;
+                document.getElementById('member-role').value = member.role;
+                document.getElementById('member-phone').value = member.phone;
+                
+                if (member.avatar) {
+                    setAvatarPreview(member.avatar);
+                    document.getElementById('member-avatar-base64').value = member.avatar;
+                    if(member.avatar.startsWith('http')) {
+                        document.getElementById('member-avatar-url').value = member.avatar;
+                    }
+                } else {
+                    clearAvatar();
+                }
+            } else {
+                document.getElementById('member-form').reset();
+                document.getElementById('member-id').value = '';
+                clearAvatar();
+            }
+        }
+
+        function closeMemberModal() {
+            document.getElementById('member-modal').classList.add('hidden');
+        }
+
+        function saveMember(e) {
+            e.preventDefault();
+            const id = document.getElementById('member-id').value;
+            const name = document.getElementById('member-name').value;
+            const avatar = document.getElementById('member-avatar-base64').value || document.getElementById('member-avatar-url').value;
+            const role = document.getElementById('member-role').value;
+            const phone = document.getElementById('member-phone').value;
+
+            if(id) {
+                const idx = members.findIndex(m => m.id == id);
+                members[idx] = { id: parseInt(id), name, avatar, role, phone };
+            } else {
+                members.push({ id: Date.now(), name, avatar, role, phone });
+            }
+
+            saveData();
+            renderMembers();
+            closeMemberModal();
+        }
+
+        function editMember(id) {
+            const m = members.find(item => item.id === id);
+            if(m) openMemberModal(m);
+        }
+
+        function deleteMember(id) {
+            if(confirm("Bạn có chắc chắn muốn xóa thành viên này?")) {
+                members = members.filter(m => m.id !== id);
+                saveData();
+                renderMembers();
+            }
+        }
+
+        // --- 6. SUBMISSIONS MANAGEMENT ---
+        function renderSubmissions() {
+            const tbody = document.getElementById('submission-table-body');
+            tbody.innerHTML = submissions.map(s => `
+                <tr class="hover:bg-gray-50/50 dark:hover:bg-gray-750">
+                    <td class="py-4 px-6 font-semibold text-gray-900 dark:text-white">${s.title}</td>
+                    <td class="py-4 px-6 text-gray-600 dark:text-gray-300">${s.student}</td>
+                    <td class="py-4 px-6">
+                        <button onclick="toggleSubmissionStatus(${s.id})" class="px-3 py-1 rounded-full text-xs font-semibold ${s.status ? 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-300' : 'bg-amber-100 text-amber-700 dark:bg-amber-900/40 dark:text-amber-300'}">
+                            ${s.status ? '<i class="fa-solid fa-check mr-1"></i> Đã hoàn thành' : '<i class="fa-solid fa-clock mr-1"></i> Chưa hoàn thành'}
+                        </button>
+                    </td>
+                    <td class="py-4 px-6">
+                        <input type="number" min="0" max="10" step="0.5" value="${s.score}" onchange="updateScore(${s.id}, this.value)" class="w-16 px-2 py-1 border rounded-lg dark:bg-gray-700 dark:border-gray-600 text-center font-bold text-primary-600 dark:text-primary-400">
+                    </td>
+                    <td class="py-4 px-6">
+                        <a href="${s.link}" target="_blank" class="text-primary-600 hover:underline flex items-center gap-1 text-xs">
+                            <i class="fa-solid fa-link"></i> Xem file
+                        </a>
+                    </td>
+                    <td class="py-4 px-6 text-right">
+                        <button onclick="deleteSubmission(${s.id})" class="text-red-500 hover:text-red-700 p-1">
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
+                    </td>
+                </tr>
+            `).join('');
+
+            // Update Dash Stats
+            document.getElementById('dash-total').innerText = submissions.length;
+            const completed = submissions.filter(s => s.status).length;
+            document.getElementById('dash-completed').innerText = completed;
+            const avg = submissions.length ? (submissions.reduce((acc, cur) => acc + parseFloat(cur.score || 0), 0) / submissions.length).toFixed(1) : "0.0";
+            document.getElementById('dash-avg').innerText = avg;
+        }
+
+        function openSubmissionModal() {
+            document.getElementById('sub-modal').classList.remove('hidden');
+        }
+        function closeSubmissionModal() {
+            document.getElementById('sub-modal').classList.add('hidden');
+        }
+
+        function saveSubmission(e) {
+            e.preventDefault();
+            const title = document.getElementById('sub-title').value;
+            const student = document.getElementById('sub-student').value;
+            const link = document.getElementById('sub-url').value;
+
+            submissions.push({ id: Date.now(), title, student, status: false, score: 0, link });
+            saveData();
+            renderSubmissions();
+            closeSubmissionModal();
+            document.getElementById('sub-form').reset();
+        }
+
+        function toggleSubmissionStatus(id) {
+            const sub = submissions.find(s => s.id === id);
+            if(sub) {
+                sub.status = !sub.status;
+                saveData();
+                renderSubmissions();
+            }
+        }
+
+        function updateScore(id, score) {
+            const sub = submissions.find(s => s.id === id);
+            if(sub) {
+                sub.score = parseFloat(score) || 0;
+                saveData();
+                renderSubmissions();
+            }
+        }
+
+        function deleteSubmission(id) {
+            if(confirm("Xóa bài nộp này?")) {
+                submissions = submissions.filter(s => s.id !== id);
+                saveData();
+                renderSubmissions();
+            }
+        }
+
+        // --- 7. DOCS MANAGEMENT ---
+        function renderDocs() {
+            const container = document.getElementById('docs-grid');
+            container.innerHTML = docs.map(d => `
+                <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-sm border border-gray-100 dark:border-gray-700 flex flex-col justify-between">
+                    <div>
+                        <div class="flex items-center gap-3 mb-3">
+                            <div class="p-2.5 bg-blue-50 dark:bg-blue-900/30 text-primary-600 rounded-xl">
+                                <i class="fa-solid fa-file-pdf text-xl"></i>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 rounded-full">${d.category}</span>
+                        </div>
+                        <h3 class="font-bold text-gray-900 dark:text-white text-base mb-4 leading-snug">${d.title}</h3>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-gray-100 dark:border-gray-700">
+                        <a href="${d.url}" target="_blank" class="text-xs font-bold text-primary-600 dark:text-primary-400 hover:underline flex items-center gap-1">
+                            <span>MỞ TÀI LIỆU</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                        <button onclick="deleteDoc(${d.id})" class="text-xs text-red-500 hover:text-red-700">
+                            <i class="fa-solid fa-trash mr-1"></i> Xóa
+                        </button>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function openDocModal() {
+            document.getElementById('doc-modal').classList.remove('hidden');
+        }
+        function closeDocModal() {
+            document.getElementById('doc-modal').classList.add('hidden');
+        }
+
+        function saveDoc(e) {
+            e.preventDefault();
+            const title = document.getElementById('doc-title').value;
+            const category = document.getElementById('doc-category').value;
+            const url = document.getElementById('doc-url').value;
+
+            docs.push({ id: Date.now(), title, category, url });
+            saveData();
+            renderDocs();
+            closeDocModal();
+            document.getElementById('doc-form').reset();
+        }
+
+        function deleteDoc(id) {
+            if(confirm("Xóa tài liệu này khỏi danh sách?")) {
+                docs = docs.filter(d => d.id !== id);
+                saveData();
+                renderDocs();
+            }
+        }
+
+        // --- INIT ---
+        renderMembers();
+        renderSubmissions();
+        renderDocs();
+        updateRealtimeStats();
+    </script>
+</body>
+</html>
